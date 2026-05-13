@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes | Capture Your Thoughts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-note-sticky"></i>
+                <span>QuickNotes</span>
+            </div>
+            <button id="add-note-btn" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Add Note
+            </button>
+        </header>
+
+        <main id="notes-grid" class="notes-grid">
+            <!-- Notes will be injected here by JS -->
+        </main>
+    </div>
+
+    <!-- Note Template (Used by JS) -->
+    <template id="note-template">
+        <div class="note">
+            <div class="note-header">
+                <div class="color-picker">
+                    <span class="color-dot yellow active" data-color="#fff9c4"></span>
+                    <span class="color-dot blue" data-color="#e3f2fd"></span>
+                    <span class="color-dot green" data-color="#e8f5e9"></span>
+                    <span class="color-dot pink" data-color="#fce4ec"></span>
+                </div>
+                <button class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <textarea class="note-body" placeholder="Start typing..."></textarea>
+            <div class="note-footer">
+                <span class="timestamp">Just now</span>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
